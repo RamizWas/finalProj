@@ -17,7 +17,7 @@ echo '<body>';
 
 echo '<main>';
 echo '<header>';
- require("header.php");
+ require("empHeader.php");
 echo '</header>';
 
 echo '<div style="display: flex; height: 820px;">';

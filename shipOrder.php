@@ -1,4 +1,4 @@
-`<?php
+<?php
 ob_start();
 session_start();
 require('./database/dbconfig.in.php');
@@ -10,7 +10,7 @@ setcookie('sort', "ProductID");
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if (isset($_POST['shipOrder'])) {
     $orderId = $_POST['orderid'];
-    $sql = "UPDATE orderTable SET orderState = 'shipped' WHERE orderId = :orderId";
+    $sql = "UPDATE ordertable SET orderState = 'shipped' WHERE orderId = :orderId";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':orderId', $orderId);
     $stmt->execute();
@@ -30,7 +30,7 @@ echo '<body>';
 
 echo '<main>';
 echo '<header>';
- require("header.php");
+ require("empHeader.php");
 echo '</header>';
 
 echo '<div style="display: flex; height: 820px;">';
@@ -47,7 +47,7 @@ if (!isset($_SESSION['id'])) {
 $userId = $_SESSION['id'];
 
     // SQL query to select order details for the given user id
-    $sql = "SELECT * FROM orderTable";
+    $sql = "SELECT * FROM ordertable";
 
     // Prepare the query
     $stmt = $pdo->prepare($sql);

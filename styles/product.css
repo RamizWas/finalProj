@@ -25,21 +25,22 @@
             background-color: #f2f2f2;
         }
 
-        .ceramic{
+   
+        .ceramic ,.on_sale {
 
           background-color: rgb(80, 106, 252);
           border: 1px solid #ff000000;
           color: #eeff00;
           
         }
-        .handcraft{
+        .handcraft, .normal ,.new_arrival{
 
           background-color: rgb(124, 124, 124);
           border: 1px solid #ff000000;
           
         }
 
-        .food{
+        .food,.high_demand, .featured{
 
           background-color: rgb(8, 22, 226);
           border: 1px solid #ff000000;

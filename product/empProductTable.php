@@ -105,8 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" ) {
 else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   if(isset($_POST['changeQuantity'])){
-    echo $_POST['cartprodid'];
-   // echo $_POST['cartprod']['ProductID'];
+   
         $stmt = $pdo->prepare("UPDATE products SET Size = Size + 1 WHERE ProductID = :productID");
         $stmt->bindParam(':productID', $_POST['cartprodid']);
         $stmt->execute();

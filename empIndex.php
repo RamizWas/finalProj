@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Employee page</title>
-<link rel="stylesheet" href="./styles/product.css">';
+<link rel="stylesheet" href="./styles/product.css">
 
     <link rel="stylesheet" href="css/style.css">
 </head>

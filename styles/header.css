@@ -1,0 +1,65 @@
+.main-body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.header-content {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loggedin-header,
+.loggedout-header {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.logoimg {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.store-name {
+  margin: 0;
+  display: inline;
+}
+
+#storeName {
+  font-size: 1.5em; /* Adjust the font size as needed */
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+#userName {
+  color: #ffcc00; /* Example: Change the color as needed */
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+.nav-link1 {
+  color: #fff;
+  text-decoration: none;
+  text-align: left  ;
+  padding: 10px;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}

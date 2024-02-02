@@ -1,0 +1,13 @@
+#name:valid { 
+ 
+  height: 20px;
+  padding: 100px;
+  border: 1px solid red;
+
+}
+
+#date_of_birthput:invalid { 
+  background: red; 
+  border: 1px solid red;
+
+}

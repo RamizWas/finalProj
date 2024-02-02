@@ -1,0 +1,20 @@
+.confirm-div{
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: cadetblue;
+  height: 100%;
+}
+.confirm-div h2{
+  font-size: 50px;
+  color: white;
+}
+.confirm-button{
+  width: 200px;
+  height: 50px;
+  background-color: gray;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}

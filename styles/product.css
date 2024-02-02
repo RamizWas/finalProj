@@ -1,0 +1,112 @@
+       table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th{
+          background-color: gray;
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        td{
+       
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+
+        th:hover {
+            background-color: #f2f2f2;
+        }
+
+        .ceramic{
+
+          background-color: rgb(80, 106, 252);
+          border: 1px solid #ff000000;
+          color: #eeff00;
+          
+        }
+        .handcraft{
+
+          background-color: rgb(124, 124, 124);
+          border: 1px solid #ff000000;
+          
+        }
+
+        .food{
+
+          background-color: rgb(8, 22, 226);
+          border: 1px solid #ff000000;
+          color: #ddd;
+          
+        }
+        .search-form {
+          max-width: 100%; /* Set a maximum width for the form */
+          margin:auto; /* Center the form on the page */
+          padding: 10px;
+          display: flex;
+          background-color: #fff; /* White background for the form */
+          border: 1px solid #ddd; /* Add a light gray border */
+          border-radius: 5px; /* Add rounded corners */
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+      }
+
+      .checkoutButton{
+        background-color: #3498db; /* Blue button background color */
+          color: #fff; /* White button text color */
+          padding: 10px 15px;
+          border: none;
+          width: 300px;
+          border-radius: 3px;
+          cursor: pointer;
+          margin-top: 2px;
+          margin-left: 50%;
+         
+      }
+
+      .form-label {
+        width:100px;
+        margin: 5px;
+          display: block;
+          margin-bottom: 8px;
+          color: #333; /* Dark gray label text color */
+      }
+
+      .form-input {
+          width: 100%;
+          
+          margin-bottom: 16px;
+          box-sizing: border-box;
+          border: 1px solid #ccc; /* Light gray border for input fields */
+          border-radius: 3px; /* Add rounded corners */
+      }
+
+      .search-button {
+          background-color: #3498db; /* Blue button background color */
+          color: #fff; /* White button text color */
+          padding: 10px 15px;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+      }
+
+      .search-button:hover {
+          background-color: #2980b9; /* Darker blue color on hover */
+      }
+
+      .error-div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff0000;
+        height: 100%;
+      }
+
+   

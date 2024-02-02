@@ -104,26 +104,15 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" ) {
 }//check if method is post
 else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-  if(isset($_POST['addToCart'])){
-   
- 
- 
-    if(!isset($_SESSION['cart'][$_POST['cartprodName']])){
-        //ADD TO ARRAY WITHOUT ARRAY_PUSH
-        $_SESSION['cart'][$_POST['cartprodName']] = 1;
-        //subtract quantity from database
-        $stmt = $pdo->prepare("UPDATE products SET Size = Size - 1 WHERE ProductID = :productID");
+  if(isset($_POST['changeQuantity'])){
+    echo $_POST['cartprodid'];
+   // echo $_POST['cartprod']['ProductID'];
+        $stmt = $pdo->prepare("UPDATE products SET Size = Size + 1 WHERE ProductID = :productID");
         $stmt->bindParam(':productID', $_POST['cartprodid']);
         $stmt->execute();
-    }else{
-      $_SESSION['cart'][$_POST['cartprodName']] =$_SESSION['cart'][$_POST['cartprodName']] + 1; 
-        //subtract quantity from database
-        $stmt = $pdo->prepare("UPDATE products SET Size = Size - 1 WHERE ProductID = :productID");
-        $stmt->bindParam(':productID', $_POST['cartprodid']);
-        $stmt->execute();
-    }
+    
    $products = fetchProducts($pdo, $sortColumn, $sortOrder);
-   print_r($_SESSION['cart']);
+
   }
 
   //check if shortlist is set
@@ -232,9 +221,9 @@ function fetchProducts($pdo, $sortColumn, $sortOrder) {
            
            if(isset($_SESSION['id'])){
              echo '<form class="search-form" method="post" action="'.$_SERVER['PHP_SELF'].'">';
-             echo '<td><button type="submit" name="addToCart">add to cart</button></td>';
+             echo '<td><button type="submit" name="changeQuantity">add item</button></td>';
              echo '<input type="hidden" name="cartprodid" value="' . $product['ProductID'] . '">';
-             echo '<input type="hidden" name="cartprodName" value="' . $product['Size'] . '">';
+             //echo '<input type="hidden" name="cartprod" value="' . $product . '">';
              echo '</form>';
            }
            echo "</tr>";

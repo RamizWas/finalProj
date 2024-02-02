@@ -1,4 +1,4 @@
-<?php
+`<?php
 ob_start();
 session_start();
 require('./database/dbconfig.in.php');
@@ -35,7 +35,7 @@ echo '</header>';
 
 echo '<div style="display: flex; height: 820px;">';
 echo '    <nav style="width:15%;">';
- require("navigation.html");
+ require("navigationEmp.html");
  echo '</nav>';
 echo '    <div style="width: 100%;"> ';
 //start
@@ -120,3 +120,4 @@ echo '</html>';
         padding: 5px;
     }
 </style>
+`

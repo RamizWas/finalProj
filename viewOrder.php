@@ -36,7 +36,7 @@ if (!isset($_SESSION['id'])) {
 $userId = $_SESSION['id'];
 
     // SQL query to select order details for the given user id
-    $sql = "SELECT * FROM orderTable WHERE customerId = :userId";
+    $sql = "SELECT * FROM ordertable WHERE customerId = :userId";
 
     // Prepare the query
     $stmt = $pdo->prepare($sql);

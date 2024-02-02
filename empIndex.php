@@ -1,9 +1,43 @@
 <?php
 session_start();
+ob_start();
+setcookie('sortOrder', "ASC");
+setcookie('sort', "ProductID");
+
+echo '<link rel="stylesheet" href="./styles/product.css">';
+
+echo '<!DOCTYPE html>';
+echo '<html lang="en">';
+echo '<head>';
+echo '    <meta charset="UTF-8">';
+echo '    <title>Final Project</title>';
+echo '</head>';
+
+echo '<body>';
+
+echo '<main>';
+echo '<header>';
+ require("header.php");
+echo '</header>';
+
+echo '<div style="display: flex; height: 820px;">';
+echo '    <nav style="width:15%;">';
+ require("navigationEmp.html");
+ echo '</nav>';
+echo '    <div style="width: 100%;"> ';
+ include("product/empProductTable.php");
+ echo '</div>';
+echo '</div>';
+
+echo '</main>';
+
+ require("footer.html") ;
+
+echo '</body>';
+echo '</html>';
+
 ?>
 
-
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Employee page</title>
@@ -11,27 +45,3 @@ session_start();
 
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-<main>
-<header>
-  <?php require("header.php") ?>
-</header>
-
-<body >
-
-<h1>Employee</h1>
-<div style=" display: flex; height: 820px; ">
-<nav style="width:15%;"> <?php require("navigationEmp.html") ?></nav>
-  
-
-<div style="width: 100%;"><?php include("product/empProductTable.php") ?></div>
-</div>
-
-</body>
-
-<?php require("footer.html") ?>
-
-
-
-
-</main>
